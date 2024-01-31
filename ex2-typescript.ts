@@ -198,6 +198,11 @@ sendMail(["75 rue Quincampoix", "75003 Paris"]); // ✅
  */
 
 type Length<T extends any[]> = T["length"]
+// type res1 = Length<[]>; // 0
+// type res2 = Length<[any]>; // 1
+// type res3 = Length<[any, any]>; // 2
+// type res4 = Length<[any, any, any]>; / /3
+
 
 /**
  * Implement a generic that gets the length
@@ -205,4 +210,7 @@ type Length<T extends any[]> = T["length"]
  */
 
 type LengthPlusOne<T extends any[]> = T["length"] extends number ?  [any,...T]['length'] : never 
-
+// type res1 = LengthPlusOne<[]>; // 1
+// type res2 = LengthPlusOne<[any]>; // 2
+// type res3 = LengthPlusOne<[any, any]>; // 3
+// type res4 = LengthPlusOne<[any, any, any]>; //4
