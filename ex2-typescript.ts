@@ -43,11 +43,11 @@ function merge<T, K>(a: T, b: K): T & K {
   return { ...a, ...b };
 }
 
-const res1 = merge({ name: "Bob" }, { age: 42 }); // { name: string } & { age: number }
-const res2 = merge({ greeting: "Hello" }, {}); // { greeting: string }
-const res3 = merge({}, { greeting: "Hello" }); //  { greeting: string }
-const res4 = merge({ a: 1, b: 2 }, { c: 3, d: 4 }); // { a: number; b: number } & { c: number; d: number }
-console.log(res1, res2, res3, res4);
+// const res1 = merge({ name: "Bob" }, { age: 42 }); // { name: string } & { age: number }
+// const res2 = merge({ greeting: "Hello" }, {}); // { greeting: string }
+// const res3 = merge({}, { greeting: "Hello" }); //  { greeting: string }
+// const res4 = merge({ a: 1, b: 2 }, { c: 3, d: 4 }); // { a: number; b: number } & { c: number; d: number }
+// console.log(res1, res2, res3, res4);
 
 /**
  * 1. implement a generic to get the union of all keys of an object type.
